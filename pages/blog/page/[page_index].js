@@ -3,7 +3,7 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import Link from "next/link";
-import PostPage from "../../../components/Post";
+import Post from "../../../components/Post";
 import { sortByDate } from "../../../utils";
 import { POSTS_PER_PAGE } from "../../../config";
 import { useEffect, useState } from "react";
@@ -31,7 +31,7 @@ export default function BlogPage({posts, numPages, currentPage}) {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-3">
         {fetched && posts.map((post, index) => 
-          <PostPage key={index} post={post} />
+          <Post key={index} post={post} />
         )}
       </div>
       <Pagination currentPage = {currentPage} numPages={numPages} />

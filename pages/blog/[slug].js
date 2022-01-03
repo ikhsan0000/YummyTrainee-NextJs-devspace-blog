@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import Layout from "@/Headercomponents/Layout"
+import Layout from "@/components/Layout"
 import Link from "next/link"
 import CategoryLabel from "@/components/CategoryLabel"
 import { marked } from "marked"

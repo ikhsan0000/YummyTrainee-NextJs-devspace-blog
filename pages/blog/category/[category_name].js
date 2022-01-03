@@ -3,7 +3,7 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import Link from "next/link";
-import PostPage from "@/components/Post";
+import Post from "@/components/Post";
 import { sortByDate } from "@/utils/index";
 
 export default function CategoryPage({posts, categoryName}) {
@@ -15,7 +15,7 @@ export default function CategoryPage({posts, categoryName}) {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-3">
         {posts.map((post, index) => 
-          <PostPage post={post} key={index} />
+          <Post post={post} key={index} />
         )}
       </div>
     

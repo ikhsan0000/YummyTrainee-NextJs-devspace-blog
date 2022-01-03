@@ -3,7 +3,7 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import Link from "next/link";
-import PostPage from "../components/Post";
+import Post from "../components/Post";
 import { sortByDate } from "../utils";
 
 export default function HomePage({posts}) {
@@ -16,7 +16,7 @@ export default function HomePage({posts}) {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-3">
         {posts.map((post, index) => 
           // <h3>{post.frontmatter.title}</h3>
-          <PostPage post={post} />
+          <Post post={post} />
         )}
       </div>
       <Link href="/blog">
